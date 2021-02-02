@@ -1,3 +1,11 @@
+.screen--intro {
+  &.active {
+    .intro__message {
+      @include text-block-transition-result;
+    }
+  }
+}
+
 .intro {
   display: flex;
   flex-direction: column;
@@ -93,6 +101,8 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.27;
+
+  @include text-block-transition-init;
 
   @media (min-width: $stop-scaling) {
     width: 509px;
