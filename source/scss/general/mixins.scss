@@ -58,3 +58,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin text-block-transition-init {
+  opacity: 0;
+  transform: translateY(50px);
+
+  transition-property: transform, opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+@mixin text-block-transition-result {
+  opacity: 1;
+  transform: translateY(0);
+}
